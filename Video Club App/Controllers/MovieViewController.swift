@@ -45,9 +45,6 @@ class MovieViewController: UIViewController {
             changeStarsImage(movie!.rate)
             loadGenres(movie!.genres)
         }
-        if NetworkMonitor.shared.isConnected {
-            realmDB.addCurrentConnectionDateTime()
-        }
     }
     
     @IBAction func reviewsTapped(_ sender: UIButton) {
