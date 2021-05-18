@@ -42,11 +42,7 @@ class ReviewsViewController: UIViewController {
             reviewsHowMany.text = "This movie does not have any reviews yet."
         }
         let path = k.baseImageUrl + movie!.posterImage
-        let url = URL(string: path)
-        let resource = ImageResource(downloadURL: url!, cacheKey: path)
-        let placeholder = UIImage(named: k.dummyUser)
-        self.movieImage.kf.setImage(with: resource, placeholder: placeholder, options: nil, completionHandler: nil)
-        
+        loadMovieImage(path)
         reviewsTableView.dataSource = self
         reviewsTableView.register(UINib(nibName: k.reviewCell, bundle: nil), forCellReuseIdentifier: k.cellIdentifier)
         
