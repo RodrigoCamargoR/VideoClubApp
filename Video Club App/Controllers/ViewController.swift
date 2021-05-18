@@ -27,7 +27,6 @@ class ViewController: UIViewController {
         if NetworkMonitor.shared.isConnected {
             // Online mode
             realmDB.deleteAllData()
-            realmDB.addCurrentConnectionDateTime()
             loadMovies()
             genreModel.fetchGenres()
         }else{
