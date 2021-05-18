@@ -7,14 +7,12 @@
 
 import UIKit
 import RealmSwift
-import Kingfisher
 
 class ViewController: UIViewController {
     @IBOutlet weak var movieListTable: UITableView!
     @IBOutlet weak var moviesTitle: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var movieManager = MovieManager()
     var viewModel = MovieModel()
     var genreModel = GenreModel()
     var reviewModel = ReviewModel()
