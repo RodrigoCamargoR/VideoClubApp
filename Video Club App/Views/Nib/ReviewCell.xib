@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReviewReusableCell" rowHeight="74" id="KGk-i7-Jjw" customClass="ReviewCell" customModule="Video_Club_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="330" height="74"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="330" height="74"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AJS-Ce-Y21">
+                        <rect key="frame" x="8" y="5" width="314" height="64"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IbQ-ML-1bA">
+                                <rect key="frame" x="5" y="5" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4rB-WF-Tr0"/>
+                                    <constraint firstAttribute="width" constant="40" id="fmf-5B-j7X"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bD8-s7-XxL">
+                                <rect key="frame" x="55" y="5" width="254" height="54"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="LFY-mS-6Yd">
+                                        <rect key="frame" x="5" y="5" width="244" height="44"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTN-sa-qZP">
+                                                <rect key="frame" x="0.0" y="0.0" width="244" height="23"/>
+                                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Du-Ms-8Fz">
+                                                <rect key="frame" x="0.0" y="27" width="244" height="17"/>
+                                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="LFY-mS-6Yd" firstAttribute="leading" secondItem="bD8-s7-XxL" secondAttribute="leading" constant="5" id="1np-mp-Z5w"/>
+                                    <constraint firstAttribute="bottom" secondItem="LFY-mS-6Yd" secondAttribute="bottom" constant="5" id="RtG-MN-fqd"/>
+                                    <constraint firstAttribute="trailing" secondItem="LFY-mS-6Yd" secondAttribute="trailing" constant="5" id="aeB-id-puY"/>
+                                    <constraint firstItem="LFY-mS-6Yd" firstAttribute="top" secondItem="bD8-s7-XxL" secondAttribute="top" constant="5" id="nst-eH-ofc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="bD8-s7-XxL" firstAttribute="top" secondItem="AJS-Ce-Y21" secondAttribute="top" id="0sd-yp-IN6"/>
+                            <constraint firstItem="IbQ-ML-1bA" firstAttribute="leading" secondItem="AJS-Ce-Y21" secondAttribute="leading" constant="5" id="2lC-8P-Tq0"/>
+                            <constraint firstItem="bD8-s7-XxL" firstAttribute="leading" secondItem="IbQ-ML-1bA" secondAttribute="trailing" constant="10" id="2yo-sf-ldw"/>
+                            <constraint firstItem="IbQ-ML-1bA" firstAttribute="top" secondItem="AJS-Ce-Y21" secondAttribute="top" constant="5" id="7Uc-H2-eGs"/>
+                            <constraint firstAttribute="trailing" secondItem="bD8-s7-XxL" secondAttribute="trailing" constant="5" id="9L8-78-JM9"/>
+                            <constraint firstAttribute="bottom" secondItem="bD8-s7-XxL" secondAttribute="bottom" constant="5" id="PzE-eR-eu6"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="AJS-Ce-Y21" secondAttribute="trailing" constant="8" id="1hS-5g-8d3"/>
+                    <constraint firstItem="AJS-Ce-Y21" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="5vS-qr-Vpy"/>
+                    <constraint firstItem="AJS-Ce-Y21" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="b6H-Rl-igP"/>
+                    <constraint firstAttribute="bottom" secondItem="AJS-Ce-Y21" secondAttribute="bottom" constant="5" id="puZ-Hl-Jmh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="authorLabel" destination="MTN-sa-qZP" id="blR-vd-3gi"/>
+                <outlet property="reviewBubble" destination="bD8-s7-XxL" id="eLX-8T-z2Q"/>
+                <outlet property="reviewLabel" destination="1Du-Ms-8Fz" id="ycc-wz-Qy6"/>
+                <outlet property="stackBubble" destination="AJS-Ce-Y21" id="95R-LC-hAc"/>
+                <outlet property="userImage" destination="IbQ-ML-1bA" id="F4A-NK-AdJ"/>
+            </connections>
+            <point key="canvasLocation" x="47.826086956521742" y="41.517857142857139"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

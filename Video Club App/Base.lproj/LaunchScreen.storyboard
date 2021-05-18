@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="blK-eh-zSn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo-transparent" translatesAutoresizingMaskIntoConstraints="NO" id="9Gh-Hz-fqs">
+                                        <rect key="frame" x="36.5" y="277.5" width="341" height="341"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIDEO CLUB" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ON7-MF-dPw">
+                                        <rect key="frame" x="8" y="221.5" width="398" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed by Rodrigo Camargo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsa-Xx-pQ1">
+                                        <rect key="frame" x="86" y="835" width="242" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="9Gh-Hz-fqs" firstAttribute="centerX" secondItem="blK-eh-zSn" secondAttribute="centerX" id="LFP-wi-YOQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="ON7-MF-dPw" secondAttribute="trailing" constant="8" id="Li9-En-iGA"/>
+                                    <constraint firstAttribute="bottom" secondItem="jsa-Xx-pQ1" secondAttribute="bottom" constant="40" id="gG9-2n-pcy"/>
+                                    <constraint firstItem="9Gh-Hz-fqs" firstAttribute="top" secondItem="ON7-MF-dPw" secondAttribute="bottom" constant="8" id="gKo-rf-hq7"/>
+                                    <constraint firstItem="jsa-Xx-pQ1" firstAttribute="centerX" secondItem="blK-eh-zSn" secondAttribute="centerX" id="oaU-OB-4V1"/>
+                                    <constraint firstItem="9Gh-Hz-fqs" firstAttribute="centerY" secondItem="blK-eh-zSn" secondAttribute="centerY" id="pBQ-oV-bWe"/>
+                                    <constraint firstItem="ON7-MF-dPw" firstAttribute="leading" secondItem="blK-eh-zSn" secondAttribute="leading" constant="8" id="xUf-VG-xEU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="blK-eh-zSn" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="EpP-ZM-THC"/>
+                            <constraint firstItem="blK-eh-zSn" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="I64-6h-GX7"/>
+                            <constraint firstAttribute="trailing" secondItem="blK-eh-zSn" secondAttribute="trailing" id="MMa-a1-q7g"/>
+                            <constraint firstAttribute="bottom" secondItem="blK-eh-zSn" secondAttribute="bottom" id="oMi-1e-IfK"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Logo-transparent" width="341" height="341"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

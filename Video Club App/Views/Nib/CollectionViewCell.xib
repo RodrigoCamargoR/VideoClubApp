@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="gTV-IL-0wX" customClass="CollectionViewCell" customModule="Video_Club_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="164" height="245"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="164" height="245"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="inV-kU-GNT">
+                        <rect key="frame" x="0.0" y="0.0" width="164" height="245"/>
+                    </imageView>
+                    <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="degradado" translatesAutoresizingMaskIntoConstraints="NO" id="goZ-m1-sPk">
+                        <rect key="frame" x="0.0" y="0.0" width="164" height="245"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="T0d-45-KEq">
+                        <rect key="frame" x="108" y="0.0" width="56" height="52"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="52" id="9Ev-1h-yzj"/>
+                            <constraint firstAttribute="width" constant="56" id="Es5-ur-BFx"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7y-ma-Vuu">
+                        <rect key="frame" x="108" y="0.0" width="56" height="56"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="56" id="USL-2V-rsa"/>
+                            <constraint firstAttribute="width" constant="56" id="fur-mI-RJr"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgf-SX-gP1">
+                        <rect key="frame" x="10" y="217" width="144" height="23"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lB5-8s-wT2">
+                        <rect key="frame" x="10" y="203" width="144" height="19"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="goZ-m1-sPk" firstAttribute="trailing" secondItem="inV-kU-GNT" secondAttribute="trailing" id="21L-aW-NvJ"/>
+                <constraint firstItem="T0d-45-KEq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="49g-E5-wy9"/>
+                <constraint firstItem="inV-kU-GNT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7Lm-lh-1hK"/>
+                <constraint firstItem="Pgf-SX-gP1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="8Yh-td-3ro"/>
+                <constraint firstAttribute="trailing" secondItem="lB5-8s-wT2" secondAttribute="trailing" constant="10" id="BBz-Nn-ZQR"/>
+                <constraint firstAttribute="trailing" secondItem="inV-kU-GNT" secondAttribute="trailing" id="Hju-de-QBc"/>
+                <constraint firstItem="Pgf-SX-gP1" firstAttribute="top" secondItem="lB5-8s-wT2" secondAttribute="bottom" constant="-5" id="JN6-rW-XvY"/>
+                <constraint firstAttribute="trailing" secondItem="l7y-ma-Vuu" secondAttribute="trailing" id="KD9-tI-r03"/>
+                <constraint firstAttribute="trailing" secondItem="T0d-45-KEq" secondAttribute="trailing" id="Kxt-63-28w"/>
+                <constraint firstItem="goZ-m1-sPk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="M4a-Dc-93e"/>
+                <constraint firstItem="lB5-8s-wT2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="Me2-dX-HYl"/>
+                <constraint firstItem="goZ-m1-sPk" firstAttribute="leading" secondItem="inV-kU-GNT" secondAttribute="leading" id="Rkr-lD-fQJ"/>
+                <constraint firstAttribute="bottom" secondItem="Pgf-SX-gP1" secondAttribute="bottom" constant="5" id="RtB-eY-V2j"/>
+                <constraint firstItem="inV-kU-GNT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Tpi-zd-rGZ"/>
+                <constraint firstAttribute="bottom" secondItem="goZ-m1-sPk" secondAttribute="bottom" id="i8p-OU-LX6"/>
+                <constraint firstAttribute="bottom" secondItem="goZ-m1-sPk" secondAttribute="bottom" id="rzU-bp-piA"/>
+                <constraint firstAttribute="bottom" secondItem="inV-kU-GNT" secondAttribute="bottom" id="sVj-hq-cXU"/>
+                <constraint firstAttribute="trailing" secondItem="Pgf-SX-gP1" secondAttribute="trailing" constant="10" id="wFD-Xh-kRj"/>
+                <constraint firstItem="l7y-ma-Vuu" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="yRb-rG-eFu"/>
+            </constraints>
+            <size key="customSize" width="164" height="245"/>
+            <connections>
+                <outlet property="moviePoster" destination="inV-kU-GNT" id="fF4-Ub-Fw0"/>
+                <outlet property="movieRatings" destination="l7y-ma-Vuu" id="WEY-Kf-kLF"/>
+                <outlet property="movieTitle" destination="Pgf-SX-gP1" id="QUf-tm-W4j"/>
+                <outlet property="movieYear" destination="lB5-8s-wT2" id="hiD-zu-RSx"/>
+            </connections>
+            <point key="canvasLocation" x="127.53623188405798" y="134.26339285714286"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="degradado" width="376" height="223"/>
+        <image name="star" width="1024" height="1024"/>
+    </resources>
+</document>
