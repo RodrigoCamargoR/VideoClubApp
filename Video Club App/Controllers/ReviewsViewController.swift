@@ -29,10 +29,6 @@ class ReviewsViewController: UIViewController {
         }else{
             print("No movie was passed!")
         }
-        
-        if NetworkMonitor.shared.isConnected {
-            realmDB.addCurrentConnectionDateTime()
-        }
     }
     
     func loadReviews(){
