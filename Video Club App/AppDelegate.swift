@@ -16,10 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Start monitoring internet connection
         NetworkMonitor.shared.startMonitoring()
+        updateLastConnectionDateEveryMinute()
         
         navigateToAnotherScreen()
         
         return true
+    }
+    
+    private func updateLastConnectionDateEveryMinute(){
+        let realmDB = RealmDatabase()
+        Timer.scheduledTimer(withTimeInterval: 60, repeats: true, block: { (_) in
+            realmDB.addCurrentConnectionDateTime()
+        })
     }
     
     private func navigateToAnotherScreen(){
