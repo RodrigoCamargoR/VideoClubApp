@@ -26,7 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func updateLastConnectionDateEveryMinute(){
         let realmDB = RealmDatabase()
         Timer.scheduledTimer(withTimeInterval: 60, repeats: true, block: { (_) in
-            realmDB.addCurrentConnectionDateTime()
+            if NetworkMonitor.shared.isConnected{
+                realmDB.addCurrentConnectionDateTime()
+            }
         })
     }
     
