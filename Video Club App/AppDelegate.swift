@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Firebase
 import RealmSwift
 
 @main
@@ -18,8 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Start monitoring internet connection
         NetworkMonitor.shared.startMonitoring()
         
-        // Initialize Cloud FireStore
-        FirebaseApp.configure()
         navigateToAnotherScreen()
         
         return true
