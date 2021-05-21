@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     var viewModel = MovieModel()
     var genreModel = GenreModel()
     var reviewModel = ReviewModel()
-    let k = K()
+    let k = Constants()
     let realmDB = RealmDatabase()
     
     override func viewDidLoad() {

@@ -9,7 +9,7 @@ import Foundation
 
 struct MoviesApi {
     private var dataTask: URLSessionDataTask?
-    let k = K()
+    let k = Constants()
     
 //MARK: - Fetch the movies from the API
     
@@ -19,18 +19,13 @@ struct MoviesApi {
         // Create URL Session
         dataTask = URLSession.shared.dataTask(with: url){(data, response, error) in
             
-            if let error = error {
-                completion(.failure(error))
-                print("DataTask error: \(error.localizedDescription)")
-                return
-            }
+            guard error == nil else { return }
             
             // Check if response is empty
-            guard let response = response as? HTTPURLResponse else {
+            guard (response as? HTTPURLResponse) != nil else {
                 print("Empty Response")
                 return
             }
-            print("Response status code: \(response.statusCode)")
             
             // Check if data is empty
             guard let data = data else {
@@ -63,18 +58,13 @@ struct MoviesApi {
         // Create URL Session
         dataTask = URLSession.shared.dataTask(with: url){(data, response, error) in
             
-            if let error = error {
-                completion(.failure(error))
-                print("DataTask error: \(error.localizedDescription)")
-                return
-            }
+            guard error == nil else { return }
 
             // Check if response is empty
-            guard let response = response as? HTTPURLResponse else {
+            guard (response as? HTTPURLResponse) != nil else {
                 print("Empty Response")
                 return
             }
-            print("Response status code: \(response.statusCode)")
             
             // Check if data is empty
             guard let data = data else {
@@ -106,18 +96,13 @@ struct MoviesApi {
             // Create URL Session
             dataTask = URLSession.shared.dataTask(with: url){(data, response, error) in
                 
-                if let error = error {
-                    completion(.failure(error))
-                    print("DataTask error: \(error.localizedDescription)")
-                    return
-                }
+                guard error == nil else { return }
                 
                 // Check if response is empty
-                guard let response = response as? HTTPURLResponse else {
+                guard (response as? HTTPURLResponse) != nil else {
                     print("Empty Response")
                     return
                 }
-                print("Response status code: \(response.statusCode)")
                 
                 // Check if data is empty
                 guard let data = data else {

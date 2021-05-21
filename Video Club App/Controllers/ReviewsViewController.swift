@@ -18,7 +18,7 @@ class ReviewsViewController: UIViewController {
     var movieIndex: Int = -1
     var realmDB = RealmDatabase()
     var reviews = [Review]()
-    var k = K()
+    var k = Constants()
 
     override func viewDidLoad() {
         super.viewDidLoad()

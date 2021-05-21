@@ -5,7 +5,7 @@
 //  Created by Rodrigo Camargo on 4/23/21.
 //
 
-struct K {
+struct Constants {
     
     //MARK: - API Data
     let apiKey: String = "api_key=2bd0308b0c46908511f36317946b9053"

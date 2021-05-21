@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-protocol CollectionViewCellDelegate: class {
+protocol CollectionViewCellDelegate: AnyObject {
     // Declare a delegate function holding a reference to `UICollectionViewCell` instance
     func collectionViewCell(_ cell: UICollectionViewCell, buttonTapped: UIButton)
 }
@@ -23,7 +23,7 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var movieID: UIButton!
     
     weak var delegate: CollectionViewCellDelegate?
-    let k = K()
+    let k = Constants()
     
     func setCellWithValuesOf(_ movie: Movie) {
         updateUI(title: movie.title, releaseDate: movie.year, rating: movie.rate, poster: movie.posterImage, id: String(movie.id), headerImg: movie.secondImg)

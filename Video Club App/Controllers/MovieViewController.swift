@@ -27,7 +27,7 @@ class MovieViewController: UIViewController {
     
     var movie: Movie? = nil
     var movieIndex: Int = 0
-    let k = K()
+    let k = Constants()
     let movieViewModel = MovieModel()
     let realmDB = RealmDatabase()
     
