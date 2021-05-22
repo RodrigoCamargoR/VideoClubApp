@@ -155,6 +155,7 @@
 			children = (
 				84489B992630BDA1000C49D6 /* AppDelegate.swift */,
 				84489B9B2630BDA1000C49D6 /* SceneDelegate.swift */,
+				84C6ED9226422A2800A167A5 /* NetworkMonitor.swift */,
 				84C6ECF9263F2FD700A167A5 /* Services */,
 				84489C292632A32D000C49D6 /* Managers */,
 				84489BD12630BE08000C49D6 /* Models */,
@@ -242,6 +243,7 @@
 		84489C292632A32D000C49D6 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				84C6ED8D264214F600A167A5 /* RealmDatabase.swift */,
 				84489BF22630F398000C49D6 /* MovieManager.swift */,
 				84482A9926533F5900CDA4F1 /* GenreManager.swift */,
 				84482A9E26533F6500CDA4F1 /* ReviewManager.swift */,
@@ -261,8 +263,6 @@
 			isa = PBXGroup;
 			children = (
 				84C6ECFA263F300B00A167A5 /* MoviesApi.swift */,
-				84C6ED8D264214F600A167A5 /* RealmDatabase.swift */,
-				84C6ED9226422A2800A167A5 /* NetworkMonitor.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
