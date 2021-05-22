@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07788FC1463C57A165CEB356 /* Pods_Video_Club_App_Video_Club_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F292F29F886169F0296CCE42 /* Pods_Video_Club_App_Video_Club_AppUITests.framework */; };
-		43F4C820242FB34F6519C938 /* Pods_Video_Club_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BF0C508DBD027634F4B316 /* Pods_Video_Club_App.framework */; };
 		84482A5E2651D15B00CDA4F1 /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84482A5D2651D15B00CDA4F1 /* APITests.swift */; };
 		84482A6E2651D23C00CDA4F1 /* MovieModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84482A6D2651D23C00CDA4F1 /* MovieModelTests.swift */; };
 		84482A832651EF2600CDA4F1 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 84482A822651EF2600CDA4F1 /* Kingfisher */; };
@@ -32,6 +30,8 @@
 		84489C5526338724000C49D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84489C5426338724000C49D6 /* GoogleService-Info.plist */; };
 		84489C7E2633D638000C49D6 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84489C7D2633D637000C49D6 /* MovieViewController.swift */; };
 		84489C8E26366C87000C49D6 /* GenreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84489C8D26366C87000C49D6 /* GenreData.swift */; };
+		845241FF2659C24C00947DD7 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 845241FE2659C24C00947DD7 /* Realm */; };
+		845242012659C24C00947DD7 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 845242002659C24C00947DD7 /* RealmSwift */; };
 		84B12FEC2639902400112DC6 /* ReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B12FEB2639902400112DC6 /* ReviewsViewController.swift */; };
 		84C6ECDF263A227500A167A5 /* ReviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6ECDE263A227500A167A5 /* ReviewData.swift */; };
 		84C6ECE8263C39E600A167A5 /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6ECE6263C39E600A167A5 /* ReviewCell.swift */; };
@@ -42,7 +42,6 @@
 		84C6ED8E264214F600A167A5 /* RealmDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6ED8D264214F600A167A5 /* RealmDatabase.swift */; };
 		84C6ED9326422A2800A167A5 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6ED9226422A2800A167A5 /* NetworkMonitor.swift */; };
 		84C6ED9B2643652600A167A5 /* DateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6ED9A2643652600A167A5 /* DateData.swift */; };
-		AE2337DBDE8B3AA9A3F81741 /* Pods_Video_Club_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4709B376EE3C04207AB5264 /* Pods_Video_Club_AppTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,10 +62,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		10BE01DDDD13C317796684CE /* Pods-Video Club App-Video Club AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Video Club App-Video Club AppUITests.release.xcconfig"; path = "Target Support Files/Pods-Video Club App-Video Club AppUITests/Pods-Video Club App-Video Club AppUITests.release.xcconfig"; sourceTree = "<group>"; };
-		297942D9DC9B9C2ABCFC6685 /* Pods-Video Club App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Video Club App.debug.xcconfig"; path = "Target Support Files/Pods-Video Club App/Pods-Video Club App.debug.xcconfig"; sourceTree = "<group>"; };
-		59EC87767CEE95C8295ACECE /* Pods-Video Club App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Video Club App.release.xcconfig"; path = "Target Support Files/Pods-Video Club App/Pods-Video Club App.release.xcconfig"; sourceTree = "<group>"; };
-		603DED89CF3DE6A48496FEDC /* Pods-Video Club App-Video Club AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Video Club App-Video Club AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-Video Club App-Video Club AppUITests/Pods-Video Club App-Video Club AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		84482A5D2651D15B00CDA4F1 /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
 		84482A6D2651D23C00CDA4F1 /* MovieModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModelTests.swift; sourceTree = "<group>"; };
 		84482A9926533F5900CDA4F1 /* GenreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreManager.swift; sourceTree = "<group>"; };
@@ -105,11 +100,6 @@
 		84C6ED8D264214F600A167A5 /* RealmDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDatabase.swift; sourceTree = "<group>"; };
 		84C6ED9226422A2800A167A5 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		84C6ED9A2643652600A167A5 /* DateData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateData.swift; sourceTree = "<group>"; };
-		CC2340662E8082CE67679BF0 /* Pods-Video Club AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Video Club AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Video Club AppTests/Pods-Video Club AppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D4709B376EE3C04207AB5264 /* Pods_Video_Club_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Video_Club_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DF6C14A29AC4D986D9AEAF32 /* Pods-Video Club AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Video Club AppTests.release.xcconfig"; path = "Target Support Files/Pods-Video Club AppTests/Pods-Video Club AppTests.release.xcconfig"; sourceTree = "<group>"; };
-		E7BF0C508DBD027634F4B316 /* Pods_Video_Club_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Video_Club_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F292F29F886169F0296CCE42 /* Pods_Video_Club_App_Video_Club_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Video_Club_App_Video_Club_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,8 +107,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845242012659C24C00947DD7 /* RealmSwift in Frameworks */,
+				845241FF2659C24C00947DD7 /* Realm in Frameworks */,
 				84482A832651EF2600CDA4F1 /* Kingfisher in Frameworks */,
-				43F4C820242FB34F6519C938 /* Pods_Video_Club_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +117,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE2337DBDE8B3AA9A3F81741 /* Pods_Video_Club_AppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,36 +124,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07788FC1463C57A165CEB356 /* Pods_Video_Club_App_Video_Club_AppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0698CCAC05B23F69FE97ACA6 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E7BF0C508DBD027634F4B316 /* Pods_Video_Club_App.framework */,
-				F292F29F886169F0296CCE42 /* Pods_Video_Club_App_Video_Club_AppUITests.framework */,
-				D4709B376EE3C04207AB5264 /* Pods_Video_Club_AppTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		477EA991416EEC7049443E7C /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				297942D9DC9B9C2ABCFC6685 /* Pods-Video Club App.debug.xcconfig */,
-				59EC87767CEE95C8295ACECE /* Pods-Video Club App.release.xcconfig */,
-				603DED89CF3DE6A48496FEDC /* Pods-Video Club App-Video Club AppUITests.debug.xcconfig */,
-				10BE01DDDD13C317796684CE /* Pods-Video Club App-Video Club AppUITests.release.xcconfig */,
-				CC2340662E8082CE67679BF0 /* Pods-Video Club AppTests.debug.xcconfig */,
-				DF6C14A29AC4D986D9AEAF32 /* Pods-Video Club AppTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		84489B8D2630BDA1000C49D6 = {
 			isa = PBXGroup;
 			children = (
@@ -171,8 +137,6 @@
 				84489BAF2630BDA4000C49D6 /* Video Club AppTests */,
 				84489BBA2630BDA4000C49D6 /* Video Club AppUITests */,
 				84489B972630BDA1000C49D6 /* Products */,
-				477EA991416EEC7049443E7C /* Pods */,
-				0698CCAC05B23F69FE97ACA6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -345,11 +309,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84489BC02630BDA4000C49D6 /* Build configuration list for PBXNativeTarget "Video Club App" */;
 			buildPhases = (
-				EA4A23A6D8907397BFA441CE /* [CP] Check Pods Manifest.lock */,
 				84489B922630BDA1000C49D6 /* Sources */,
 				84489B932630BDA1000C49D6 /* Frameworks */,
 				84489B942630BDA1000C49D6 /* Resources */,
-				175D307CCAF447675634780E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -358,6 +320,8 @@
 			name = "Video Club App";
 			packageProductDependencies = (
 				84482A822651EF2600CDA4F1 /* Kingfisher */,
+				845241FE2659C24C00947DD7 /* Realm */,
+				845242002659C24C00947DD7 /* RealmSwift */,
 			);
 			productName = "Video Club App";
 			productReference = 84489B962630BDA1000C49D6 /* Video Club App.app */;
@@ -367,7 +331,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84489BC32630BDA4000C49D6 /* Build configuration list for PBXNativeTarget "Video Club AppTests" */;
 			buildPhases = (
-				6E1E33D5052F7430EFF6ECB5 /* [CP] Check Pods Manifest.lock */,
 				84489BA82630BDA4000C49D6 /* Sources */,
 				84489BA92630BDA4000C49D6 /* Frameworks */,
 				84489BAA2630BDA4000C49D6 /* Resources */,
@@ -386,11 +349,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84489BC62630BDA4000C49D6 /* Build configuration list for PBXNativeTarget "Video Club AppUITests" */;
 			buildPhases = (
-				959B9041080030AE6017F989 /* [CP] Check Pods Manifest.lock */,
 				84489BB32630BDA4000C49D6 /* Sources */,
 				84489BB42630BDA4000C49D6 /* Frameworks */,
 				84489BB52630BDA4000C49D6 /* Resources */,
-				AD8BDD8B84AE61337A87B091 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -435,6 +396,7 @@
 			mainGroup = 84489B8D2630BDA1000C49D6;
 			packageReferences = (
 				84482A812651EF2600CDA4F1 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				845241FD2659C24C00947DD7 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = 84489B972630BDA1000C49D6 /* Products */;
 			projectDirPath = "";
@@ -476,109 +438,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		175D307CCAF447675634780E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Video Club App/Pods-Video Club App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Video Club App/Pods-Video Club App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Video Club App/Pods-Video Club App-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6E1E33D5052F7430EFF6ECB5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Video Club AppTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		959B9041080030AE6017F989 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Video Club App-Video Club AppUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AD8BDD8B84AE61337A87B091 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Video Club App-Video Club AppUITests/Pods-Video Club App-Video Club AppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Video Club App-Video Club AppUITests/Pods-Video Club App-Video Club AppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Video Club App-Video Club AppUITests/Pods-Video Club App-Video Club AppUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EA4A23A6D8907397BFA441CE /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Video Club App-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84489B922630BDA1000C49D6 /* Sources */ = {
@@ -781,7 +640,6 @@
 		};
 		84489BC12630BDA4000C49D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 297942D9DC9B9C2ABCFC6685 /* Pods-Video Club App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -801,7 +659,6 @@
 		};
 		84489BC22630BDA4000C49D6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 59EC87767CEE95C8295ACECE /* Pods-Video Club App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -821,7 +678,6 @@
 		};
 		84489BC42630BDA4000C49D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC2340662E8082CE67679BF0 /* Pods-Video Club AppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -844,7 +700,6 @@
 		};
 		84489BC52630BDA4000C49D6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DF6C14A29AC4D986D9AEAF32 /* Pods-Video Club AppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -867,7 +722,6 @@
 		};
 		84489BC72630BDA4000C49D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 603DED89CF3DE6A48496FEDC /* Pods-Video Club App-Video Club AppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -888,7 +742,6 @@
 		};
 		84489BC82630BDA4000C49D6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 10BE01DDDD13C317796684CE /* Pods-Video Club App-Video Club AppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -957,6 +810,14 @@
 				minimumVersion = 6.3.0;
 			};
 		};
+		845241FD2659C24C00947DD7 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.7.6;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -964,6 +825,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 84482A812651EF2600CDA4F1 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		845241FE2659C24C00947DD7 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 845241FD2659C24C00947DD7 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		845242002659C24C00947DD7 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 845241FD2659C24C00947DD7 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
