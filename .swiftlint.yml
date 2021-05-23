@@ -10,8 +10,6 @@ included:
   - Video Club App
   
 excluded:
-  - Video Club App/AppDelegate.swift
-  - Video Club App/SceneDelegate.swift
   - Pods
 
 line_length: 200
