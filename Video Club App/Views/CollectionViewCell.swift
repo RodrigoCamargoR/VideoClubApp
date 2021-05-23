@@ -29,8 +29,8 @@ class CollectionViewCell: UICollectionViewCell {
         updateUI(title: movie.title, releaseDate: movie.year, rating: movie.rate, poster: movie.posterImage, id: String(movie.id), headerImg: movie.secondImg)
     }
     
-//MARK: - Update the UI of the cell
-    func updateUI (title: String?, releaseDate: String?, rating: Double?, poster: String?, id: String?, headerImg: String){
+// MARK: - Update the UI of the cell
+    func updateUI (title: String?, releaseDate: String?, rating: Double?, poster: String?, id: String?, headerImg: String) {
         self.movieTitle.text = title ?? ""
         self.movieYear.text = convertDateToYear(releaseDate)
         guard let rate = rating  else { return }
@@ -39,7 +39,6 @@ class CollectionViewCell: UICollectionViewCell {
         guard let posterString = poster else { return }
         let posterUrlString = k.baseImageUrl + posterString
         let headerUrlString = k.baseImageUrl + headerImg
-        
         
         if URL(string: posterUrlString) != nil {
             let url = URL(string: posterUrlString)
@@ -63,16 +62,15 @@ class CollectionViewCell: UICollectionViewCell {
             }
         }
 
-            
     }
     
-//MARK: - Format date
+// MARK: - Format date
     func convertDateToYear(_ date: String?) -> String {
         var fixDate = ""
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         if let originalDate = date {
-            if let newDate = dateFormatter.date(from: originalDate){
+            if let newDate = dateFormatter.date(from: originalDate) {
                 dateFormatter.dateFormat = "yyyy"
                 fixDate = dateFormatter.string(from: newDate)
             }
@@ -80,8 +78,7 @@ class CollectionViewCell: UICollectionViewCell {
         return fixDate
     }
     
-    
-    static func nib() -> UINib{
+    static func nib() -> UINib {
         return UINib(nibName: "CollectionViewCell", bundle: nil)
     }
 }

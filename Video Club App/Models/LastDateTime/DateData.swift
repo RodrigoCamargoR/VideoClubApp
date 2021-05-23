@@ -11,7 +11,7 @@ import RealmSwift
 class DateData: Object {
     @objc dynamic var date: String = ""
     
-    func dateToString(_ date : Date) -> String{
+    func dateToString(_ date: Date) -> String {
         let calendar = Calendar.current
         let day = calendar.component(.day, from: date)
         let month = calendar.component(.month, from: date)
@@ -23,7 +23,7 @@ class DateData: Object {
         return datetime
     }
     
-    func stringToDate(_ date : String) -> Date{
+    func stringToDate(_ date: String) -> Date {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd/MM/yyyy HH:mm"
         

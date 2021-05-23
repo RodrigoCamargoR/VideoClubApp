@@ -1,0 +1,18 @@
+disabled_rules:
+  - identifier_name
+  - force_try
+  - force_cast
+  - trailing_whitespace
+  - empty_parentheses_with_trailing_closure
+
+included:
+  - Video Club App
+  
+excluded:
+  - Pods
+
+force_cast: warning
+
+force_try:
+  severity: warning
+line_length: 200

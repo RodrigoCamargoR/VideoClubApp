@@ -15,7 +15,6 @@ class ReviewCell: UITableViewCell {
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var stackBubble: UIStackView!
 
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

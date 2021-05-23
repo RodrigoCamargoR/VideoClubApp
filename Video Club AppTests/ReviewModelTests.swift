@@ -10,12 +10,10 @@ import XCTest
 
 class ReviewModelTests: XCTestCase {
 
-    func test_format_path (){
+    func test_format_path () {
         let reviewModel = ReviewModel()
         let path = "http://www.something.com/this/is/an/img.png"
-        
         let result = reviewModel.formatAvatarPath(path)
         XCTAssertEqual(result, "img.png")
     }
-    
 }

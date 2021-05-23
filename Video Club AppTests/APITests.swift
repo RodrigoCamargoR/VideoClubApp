@@ -12,31 +12,31 @@ class APITests: XCTestCase {
 
     func test_Api_Movies_ReturnsNotNil(){
         var movieManager = MovieManager()
-        movieManager.getMovies { (result,error) in
+        movieManager.getMovies { (result, error) in
             XCTAssertNotNil(result)
             XCTAssertNil(error)
         }
     }
     
-    func test_Api_Genres_ReturnsNotNil(){
+    func test_Api_Genres_ReturnsNotNil() {
         var genreManager = GenreManager()
-        genreManager.getGenres { (result,error) in
+        genreManager.getGenres { (result, error) in
             XCTAssertNotNil(result)
             XCTAssertNil(error)
         }
     }
     
-    func test_Api_MovieReviews_ReturnsNotNil(){
+    func test_Api_MovieReviews_ReturnsNotNil() {
         var reviewManager = ReviewManager()
-        reviewManager.getReviews("460465"){ (result,error) in
+        reviewManager.getReviews("460465") { (result, error) in
             XCTAssertNotNil(result)
             XCTAssertNil(error)
         }
     }
     
-    func test_Api_MovieReviews_ReturnsNil(){
+    func test_Api_MovieReviews_ReturnsNil() {
         var reviewManager = ReviewManager()
-        reviewManager.getReviews("1"){ (result,error) in
+        reviewManager.getReviews("1") { (result, error) in
             XCTAssertNil(result)
             XCTAssertNotNil(error)
         }

@@ -19,20 +19,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         updateLastConnectionDateEveryMinute()
         
         navigateToAnotherScreen()
-        
+         
         return true
     }
     
-    private func updateLastConnectionDateEveryMinute(){
+    private func updateLastConnectionDateEveryMinute() {
         let realmDB = RealmDatabase()
         Timer.scheduledTimer(withTimeInterval: 60, repeats: true, block: { (_) in
-            if NetworkMonitor.shared.isConnected{
+            if NetworkMonitor.shared.isConnected {
                 realmDB.addCurrentConnectionDateTime()
             }
         })
     }
     
-    private func navigateToAnotherScreen(){
+    private func navigateToAnotherScreen() {
         let window = UIWindow(frame: UIScreen.main.bounds)
         let navigat = UINavigationController()
         let vcw = ViewController(nibName: "ViewController", bundle: nil)

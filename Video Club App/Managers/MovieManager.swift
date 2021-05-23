@@ -7,11 +7,10 @@
 
 import UIKit
 
-struct MovieManager {
-    
+struct MovieManager {    
     var api = MoviesApi()
 
-    mutating func getMovies(completion: @escaping (MovieData?, Error?) -> ()){
+    mutating func getMovies(completion: @escaping (MovieData?, Error?) -> Void) {
         api.getMovies() { (result) in
             switch result {
             case .success(let listOf):
@@ -21,5 +20,4 @@ struct MovieManager {
             }
         }
     }
-    
 }

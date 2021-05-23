@@ -15,42 +15,40 @@ class MovieModel {
     var moviesRealm: Results<Movie>?
     var movies = [MovieInfo]()
     
-    func fetchMovies(completion: @escaping () -> ()) {
+    func fetchMovies(completion: @escaping () -> Void) {
         movieManager.getMovies { (listOf, error) in
             if error == nil {
                 self.movies = listOf!.movies
                 // Save to movies to database
                 var index = 0
-                for movie in self.movies{
+                for movie in self.movies {
                     self.realmDB.saveMovie(movie, index)
                     index += 1
                 }
                 self.loadMoviesFromRealm()
                 completion()
-            }else{
+            } else {
                 print("There was an error when processing Json data: \(error!)")
             }
         }
     }
     
-    func loadMoviesFromRealm(){
+    func loadMoviesFromRealm() {
         moviesRealm = realm.objects(Movie.self)
     }
-    
     func numberOfRows(section: Int) -> Int {
         if moviesRealm?.count != nil {
             return moviesRealm!.count
-        }else{
+        } else {
             return 0
         }
     }
-    
     func cellForRowAt(indexPath: IndexPath) -> Movie {
         let currentMovie = moviesRealm![indexPath.row]
         return currentMovie
     }
     
-    func getStarsAmount(_ rate: Double) -> Int{
+    func getStarsAmount(_ rate: Double) -> Int {
         let rating = (rate*5)/10
         switch true {
         case rating > 4.5:

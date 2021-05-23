@@ -29,14 +29,14 @@ class ViewController: UIViewController {
             realmDB.deleteAllData()
             loadMovies()
             genreModel.fetchGenres()
-        }else{
+        } else {
             // Offline mode
             let today = Date()
             let date = realmDB.getLastConnecionDate()
             if today.timeIntervalSince(date) > (k.connectionHours * 3600) {
                 realmDB.deleteAllData()
                 loadConnectToInternetAlert()
-            }else{
+            } else {
                 loadRealmMovies()
             }
         }
@@ -46,14 +46,14 @@ class ViewController: UIViewController {
         collectionView.collectionViewLayout = layout
     }
 
-    func loadConnectToInternetAlert(){
+    func loadConnectToInternetAlert() {
         let alert = UIAlertController(title: k.alertTitle, message: k.alertBody, preferredStyle: .alert)
         
         present(alert, animated: true)
     }
     
     // Loads the movies into the App calling the API
-    func loadMovies()  {
+    func loadMovies() {
         viewModel.fetchMovies { [weak self] in
             self?.collectionView.dataSource = self
             self?.collectionView.reloadData()
@@ -61,9 +61,7 @@ class ViewController: UIViewController {
     }
     
     // Loads the movies into the App directly from Realm
-    func loadRealmMovies(){
+    func loadRealmMovies() {
         viewModel.loadMoviesFromRealm()
     }
-    
 }
-

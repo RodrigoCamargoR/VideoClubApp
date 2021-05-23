@@ -11,28 +11,24 @@ struct MoviesApi {
     private var dataTask: URLSessionDataTask?
     let k = Constants()
     
-//MARK: - Fetch the movies from the API
-    
+// MARK: - Fetch the movies from the API
     mutating func getMovies(completion: @escaping (Result<MovieData, Error>) -> Void) {
         guard let url = URL(string: k.apiUrl + "&" + k.apiKey) else { return }
         
         // Create URL Session
-        dataTask = URLSession.shared.dataTask(with: url){(data, response, error) in
+        dataTask = URLSession.shared.dataTask(with: url) {(data, response, error) in
             
             guard error == nil else { return }
-            
             // Check if response is empty
             guard (response as? HTTPURLResponse) != nil else {
                 print("Empty Response")
                 return
             }
-            
             // Check if data is empty
             guard let data = data else {
                 print("Empty Data")
                 return
             }
-            
             do {
                 // Parse Json pulled from the API
                 let decoder = JSONDecoder()
@@ -41,22 +37,21 @@ struct MoviesApi {
                 DispatchQueue.main.async {
                     completion(.success(jsonData))
                 }
-            }catch let error{
+            } catch let error {
                 completion(.failure(error))
                 print("Error on parsing Json")
             }
         }
         dataTask?.resume()
     }
+
+    // MARK: - Get the Movie Genres from the API
     
-    
-    //MARK: - Get the Movie Genres from the API
-    
-    mutating func getMovieGenres(completion: @escaping (Result<GenreData, Error>) -> Void){
+    mutating func getMovieGenres(completion: @escaping (Result<GenreData, Error>) -> Void) {
         guard let url = URL(string: k.genreApiURL + "&" + k.apiKey) else { return }
         
         // Create URL Session
-        dataTask = URLSession.shared.dataTask(with: url){(data, response, error) in
+        dataTask = URLSession.shared.dataTask(with: url) {(data, response, error) in
             
             guard error == nil else { return }
 
@@ -65,13 +60,11 @@ struct MoviesApi {
                 print("Empty Response")
                 return
             }
-            
             // Check if data is empty
             guard let data = data else {
                 print("Empty Data")
                 return
             }
-            
             do {
                 // Parse Json pulled from the API
                 let decoder = JSONDecoder()
@@ -80,7 +73,7 @@ struct MoviesApi {
                 DispatchQueue.main.async {
                     completion(.success(jsonData))
                 }
-            }catch let error{
+            } catch let error {
                 completion(.failure(error))
                 print("Error on parsing Json")
             }
@@ -88,28 +81,23 @@ struct MoviesApi {
         dataTask?.resume()
     }
     
-    //MARK: - Fetch the reviews from the API
-        
+    // MARK: - Fetch the reviews from the API
     mutating func getReviews(_ movieID: String, completion: @escaping (Result<ReviewData, Error>) -> Void) {
             guard let url = URL(string: k.reviewsURL + "\(movieID)/reviews?" + k.apiKey) else { return }
-            
             // Create URL Session
-            dataTask = URLSession.shared.dataTask(with: url){(data, response, error) in
+            dataTask = URLSession.shared.dataTask(with: url) {(data, response, error) in
                 
                 guard error == nil else { return }
-                
                 // Check if response is empty
                 guard (response as? HTTPURLResponse) != nil else {
                     print("Empty Response")
                     return
                 }
-                
                 // Check if data is empty
                 guard let data = data else {
                     print("Empty Data")
                     return
                 }
-                
                 do {
                     // Parse Json pulled from the API
                     let decoder = JSONDecoder()
@@ -118,12 +106,11 @@ struct MoviesApi {
                     DispatchQueue.main.async {
                         completion(.success(jsonData))
                     }
-                }catch let error{
+                } catch let error {
                     completion(.failure(error))
                     print("Error on parsing Json")
                 }
             }
             dataTask?.resume()
         }
-    
 }

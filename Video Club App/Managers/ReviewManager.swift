@@ -11,8 +11,8 @@ struct ReviewManager {
     
     var api = MoviesApi()
 
-    mutating func getReviews(_ id: String, completion: @escaping (ReviewData?, Error?) -> ()){
-        api.getReviews(id) { (result) in
+    mutating func getReviews(_ movieID: String, completion: @escaping (ReviewData?, Error?) -> Void) {
+        api.getReviews(movieID) { (result) in
             switch result {
             case .success(let listOf):
                 completion(listOf, nil)

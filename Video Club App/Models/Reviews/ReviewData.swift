@@ -11,7 +11,7 @@ import RealmSwift
 struct ReviewData: Codable {
     let reviews: [ReviewInfo]
     
-    private enum CodingKeys: String, CodingKey{
+    private enum CodingKeys: String, CodingKey {
         case reviews = "results"
     }
 }
@@ -21,7 +21,7 @@ struct ReviewInfo: Codable {
     let content: String
     let author: ReviewAuthor
     
-    private enum CodingKeys: String, CodingKey{
+    private enum CodingKeys: String, CodingKey {
         case content, id
         case author = "author_details"
     }
@@ -32,7 +32,7 @@ struct ReviewAuthor: Codable {
     let name: String?
     let avatar: String?
     
-    private enum CodingKeys: String, CodingKey{
+    private enum CodingKeys: String, CodingKey {
         case name
         case user = "username"
         case avatar = "avatar_path"
@@ -41,9 +41,9 @@ struct ReviewAuthor: Codable {
 
 class Review: Object {
     @objc dynamic var id: String = ""
-    @objc dynamic var content : String = ""
-    @objc dynamic var authorUser : String = ""
-    @objc dynamic var authorAvatar : String = ""
+    @objc dynamic var content: String = ""
+    @objc dynamic var authorUser: String = ""
+    @objc dynamic var authorAvatar: String = ""
     
     var parentMovie = LinkingObjects(fromType: Movie.self, property: "reviews")
 }

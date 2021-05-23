@@ -9,7 +9,7 @@ import UIKit
 
 class ImageViewCell: UITableViewCell {
     
-    var mainImageView : UIImageView = {
+    var mainImageView: UIImageView = {
        var imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView

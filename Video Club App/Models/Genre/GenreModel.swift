@@ -14,13 +14,13 @@ class GenreModel {
     
     func fetchGenres() {
         genreManager.getGenres { (listOf, error) in
-            if error == nil{
+            if error == nil {
                 self.genres = listOf!.genres
                 // Save to genres to database
-                for genre in self.genres{
+                for genre in self.genres {
                     self.realm.saveGenre(genre)
                 }
-            }else{
+            } else {
                 print("There was an error when processing Json data: \(error!)")
             }
         }

@@ -12,17 +12,17 @@ class ReviewModel {
     private var realm = RealmDatabase()
     var reviews = [ReviewInfo]()
     
-    func fetchReviews(_ id: String, _ index: String){
-        reviewManager.getReviews(id, completion: { (listOf, error) in
+    func fetchReviews(_ movieId: String, _ index: String) {
+        reviewManager.getReviews(movieId, completion: { (listOf, error) in
             if error == nil {
                 self.reviews = listOf!.reviews
                 // Remove reviews from database
                 self.realm.deleteReviewsFromMovie(index)
                 // Save to movies to database
-                for review in self.reviews{
+                for review in self.reviews {
                     self.realm.saveReview(review, index)
                 }
-            }else{
+            } else {
                 print("There was an error when processing Json data: \(error!)")
             }
         })

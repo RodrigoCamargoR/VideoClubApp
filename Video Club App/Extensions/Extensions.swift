@@ -8,10 +8,9 @@
 import UIKit
 import Kingfisher
 
-//MARK: - UICollectionViewDataSource
+// MARK: - UICollectionViewDataSource
 
-extension ViewController : UICollectionViewDataSource {
-    
+extension ViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.numberOfRows(section: section)
@@ -34,28 +33,27 @@ extension ViewController : UICollectionViewDataSource {
     }
 }
 
-//MARK: - UICollectionViewDelegate
-extension ViewController : UICollectionViewDelegate{
+// MARK: - UICollectionViewDelegate
+extension ViewController: UICollectionViewDelegate {
     // Returns the index movie that was selected
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let index = indexPath.row
         let realmDb = RealmDatabase()
         let selectedMovie = realmDb.getMovie(index)
-        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MovieViewController") as?  MovieViewController{
+        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MovieViewController") as?  MovieViewController {
             vc.movie = selectedMovie
             vc.movieIndex = index
             self.navigationController?.pushViewController(vc, animated: true)
-            if NetworkMonitor.shared.isConnected{
+            if NetworkMonitor.shared.isConnected {
                 self.reviewModel.fetchReviews(String(selectedMovie.id), String(index))
             }
         }
     }
 }
 
+// MARK: - UICollectionViewDelegateFlowLayout
 
-//MARK: - UICollectionViewDelegateFlowLayout
-
-extension ViewController : UICollectionViewDelegateFlowLayout {
+extension ViewController: UICollectionViewDelegateFlowLayout {
     
     // Set Cell size
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -82,8 +80,8 @@ extension ViewController : UICollectionViewDelegateFlowLayout {
     }
 }
 
-//MARK: - ReviewsViewController
-extension ReviewsViewController : UITableViewDataSource {
+// MARK: - ReviewsViewController
+extension ReviewsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return reviews.count
     }
@@ -93,10 +91,10 @@ extension ReviewsViewController : UITableViewDataSource {
         let i = indexPath.row
         cell.authorLabel.text = reviews[i].authorUser
         cell.reviewLabel.text = reviews[i].content
-        
+
         if reviews[i].authorAvatar == "Na"{
             cell.userImage.image = UIImage(named: k.dummyUser)
-        }else{
+        } else {
             let userImageURL = k.userImageBase + reviews[i].authorAvatar
             let url = URL(string: userImageURL)
             let resource = ImageResource(downloadURL: url!, cacheKey: userImageURL)
@@ -110,11 +108,10 @@ extension ReviewsViewController : UITableViewDataSource {
         
         return cell
     }
-    
-    
+
 }
 
-//MARK: - UIImage extensions
+// MARK: - UIImage extensions
 
 extension UIImage {
     func resizeTopAlignedToFill(newWidth: CGFloat) -> UIImage? {

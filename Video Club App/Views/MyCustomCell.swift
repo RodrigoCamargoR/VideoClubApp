@@ -8,9 +8,6 @@
 import UIKit
 
 class MyCustomCell: UICollectionViewCell, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
-    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCustomCell.reuseIdentifier, for: indexPath) as? MyCustomCell else {
@@ -24,5 +21,5 @@ class MyCustomCell: UICollectionViewCell, UICollectionViewDataSource {
         addButtonTapAction?()
     }
 
-    var addButtonTapAction : (()->())?
+    var addButtonTapAction : (() -> Void)?
 }

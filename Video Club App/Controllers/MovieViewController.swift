@@ -25,7 +25,7 @@ class MovieViewController: UIViewController {
     @IBOutlet weak var contentStackView: UIStackView!
     @IBOutlet weak var mainContentView: UIView!
     
-    var movie: Movie? = nil
+    var movie: Movie?
     var movieIndex: Int = 0
     let k = Constants()
     let movieViewModel = MovieModel()
@@ -48,31 +48,29 @@ class MovieViewController: UIViewController {
     }
     
     @IBAction func reviewsTapped(_ sender: UIButton) {
-        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ReviewsViewController") as?  ReviewsViewController{
-            vc.movie = movie
-            vc.movieIndex = movieIndex
-            self.navigationController?.pushViewController(vc, animated: true)
+        if let rvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ReviewsViewController") as?  ReviewsViewController {
+            rvc.movie = movie
+            rvc.movieIndex = movieIndex
+            self.navigationController?.pushViewController(rvc, animated: true)
         }
     }
     
-    
-    //MARK: - Pull genres and write them in the page
+    // MARK: - Pull genres and write them in the page
     func loadGenres(_ genres: List<Int>) {
         self.genres.text = ""
         let realmDb = RealmDatabase()
-        for (index, g) in genres.enumerated(){
-            let genre = realmDb.getGenre(g)
-            if index == genres.count - 1{
+        for (index, gen) in genres.enumerated() {
+            let genre = realmDb.getGenre(gen)
+            if index == genres.count - 1 {
                 self.genres.text! += "\(genre.name)"
-            }
-            else{
+            } else {
                 self.genres.text! += "\(genre.name), "
             }
         }
     }
     
-    //MARK: - Change stars image
-    func changeStarsImage(_ i: Double) {
+    // MARK: - Change stars image
+    func changeStarsImage(_ rate: Double) {
         let starsAmount = movieViewModel.getStarsAmount(movie!.rate)
         switch starsAmount {
         case 5:
@@ -90,7 +88,7 @@ class MovieViewController: UIViewController {
         }
     }
     
-    //MARK: - Load Poster Image
+    // MARK: - Load Poster Image
     func loadPosterImage(_ path: String) {
         let posterImageURL = k.baseImageUrl + path
         let url = URL(string: posterImageURL)
@@ -100,7 +98,7 @@ class MovieViewController: UIViewController {
         
     }
     
-    //MARK: - Load Header Image
+    // MARK: - Load Header Image
     func loadHeaderImage(_ path: String) {
         let headerImageURL = k.baseImageUrl + path
         let url = URL(string: headerImageURL)
@@ -116,7 +114,7 @@ class MovieViewController: UIViewController {
         if UIDevice.current.orientation.isLandscape {
             if self.scrollView.frame.width > 1000 {
                 applyLandscapeStylesiPad()
-            }else{
+            } else {
                 applyLandscapeStylesiPhone()
             }
             self.headerImage.contentMode = .scaleAspectFill
@@ -127,7 +125,7 @@ class MovieViewController: UIViewController {
         }
     }
     
-    func applyLandscapeStylesiPad(){
+    func applyLandscapeStylesiPad() {
         movieTitle.font = movieTitle.font.withSize(40)
         peopleWatching.font = peopleWatching.font.withSize(30)
         rate.font = rate.font.withSize(40)
@@ -142,7 +140,7 @@ class MovieViewController: UIViewController {
         genres.font = genres.font.withSize(17)
     }
     
-    func applyPortraitStyles(){
+    func applyPortraitStyles() {
         movieTitle.font = movieTitle.font.withSize(25)
         peopleWatching.font = peopleWatching.font.withSize(17)
         rate.font = rate.font.withSize(25)

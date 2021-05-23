@@ -12,21 +12,21 @@ struct RealmDatabase {
     
     let realm = try! Realm()
     
-    //MARK: - Add current DateTime connection to Realm
+    // MARK: - Add current DateTime connection to Realm
     
-    func addCurrentConnectionDateTime(){
+    func addCurrentConnectionDateTime() {
         let date = Date()
         let d: DateData = DateData()
         let dateString: String = d.dateToString(date)
         d.date = dateString
         // Update last connection with the new one
-        try! realm.write{
+        try! realm.write {
             try! realm.delete(Realm().objects(DateData.self))
             realm.add(d)
         }
     }
     
-    //MARK: - Get last connection DateTime
+    // MARK: - Get last connection DateTime
     func getLastConnecionDate() -> Date {
         var newLastDate = Date()
         let lastDate = realm.objects(DateData.self)
@@ -35,25 +35,24 @@ struct RealmDatabase {
         return newLastDate
     }
     
-    //MARK: - Delete all data from Realm
+    // MARK: - Delete all data from Realm
 
-    func deleteAllData(){
-        try! realm.write{
+    func deleteAllData() {
+        try! realm.write {
             try! realm.delete(Realm().objects(Movie.self))
             try! realm.delete(Realm().objects(Genre.self))
             try! realm.delete(Realm().objects(Review.self))
         }
     }
     
-    //MARK: - Movies
-    
+    // MARK: - Movies
     func saveMovie(_ movie: MovieInfo, _ index: Int) {
-        let m: Movie = formatMovieClass(movie, index)
-        do{
-            try realm.write{
-                realm.add(m)
+        let mov: Movie = formatMovieClass(movie, index)
+        do {
+            try realm.write {
+                realm.add(mov)
             }
-        }catch{
+        } catch {
             print("There was an error when adding the movie to the realm: \(error)")
         }
     }
@@ -61,18 +60,16 @@ struct RealmDatabase {
     func getMovie(_ movieID: Int) -> Movie {
         var movieSelected = Movie()
         let movies = realm.objects(Movie.self)
-        for movie in movies {
-            if movie.dbId == movieID{
-                movieSelected = movie
-            }
+        for movie in movies where movie.dbId == movieID {
+            movieSelected = movie
         }
         return movieSelected
     }
     
-    func formatMovieClass(_ movie : MovieInfo, _ i: Int) -> Movie {
+    func formatMovieClass(_ movie: MovieInfo, _ index: Int) -> Movie {
         let newMovie = Movie()
         newMovie.id = String(movie.id)
-        newMovie.dbId = i
+        newMovie.dbId = index
         newMovie.title = movie.title
         newMovie.year = movie.year
         newMovie.overview = movie.overview
@@ -80,22 +77,22 @@ struct RealmDatabase {
         newMovie.rate = movie.rate
         newMovie.posterImage = movie.posterImage
         newMovie.secondImg = movie.secondImg
-        for genre in movie.genres{
+        for genre in movie.genres {
             newMovie.genres.append(genre)
         }
         
         return newMovie
     }
     
-    //MARK: - Genres
+    // MARK: - Genres
     
-    func saveGenre(_ genre : GenreInfo) {
-        let g: Genre = formatToGenre(genre)
-        do{
-            try realm.write{
-                realm.add(g)
+    func saveGenre(_ genre: GenreInfo) {
+        let gen: Genre = formatToGenre(genre)
+        do {
+            try realm.write {
+                realm.add(gen)
             }
-        }catch{
+        } catch {
             print("There was an error when adding the genre to the realm: \(error)")
         }
     }
@@ -103,33 +100,30 @@ struct RealmDatabase {
     func getGenre(_ genreId: Int) -> Genre {
         let newGenre = Genre()
         let genres = realm.objects(Genre.self)
-        for genre in genres{
-            if genre.id == genreId {
-                newGenre.id = genre.id
-                newGenre.name = genre.name
-            }
+        for genre in genres where genre.id == genreId {
+            newGenre.id = genre.id
+            newGenre.name = genre.name
         }
         return newGenre
     }
     
-    func formatToGenre(_ genre : GenreInfo) -> Genre {
+    func formatToGenre(_ genre: GenreInfo) -> Genre {
         let newGenre = Genre()
         newGenre.id = genre.id
         newGenre.name = genre.name
-        
         return newGenre
     }
     
-    //MARK: - Reviews
+    // MARK: - Reviews
     
-    func saveReview(_ review : ReviewInfo, _ movieId: String) {
-        let r: Review = formatToReview(review)
+    func saveReview(_ review: ReviewInfo, _ movieId: String) {
+        let rev: Review = formatToReview(review)
         let selectedMovie = getMovie(Int(movieId)!)
         do {
-            try realm.write{
-                selectedMovie.reviews.append(r)
+            try realm.write {
+                selectedMovie.reviews.append(rev)
             }
-        }catch{
+        } catch {
             print("There was an error when adding the review to the realm: \(error)")
         }
     }
@@ -146,32 +140,29 @@ struct RealmDatabase {
     
     func deleteReviewsFromMovie(_ movie: String) {
         let allMovies = realm.objects(Movie.self)
-        for m in allMovies {
-            if m.dbId == Int(movie){
-                do{
+        for mov in allMovies {
+            if mov.dbId == Int(movie) {
+                do {
                     try realm.write {
-                        realm.delete(m.reviews)
+                        realm.delete(mov.reviews)
                     }
-                }catch{
+                } catch {
                     print("Error removing the reviews: \(error)")
                 }
             }
         }
     }
     
-    func formatToReview(_ review : ReviewInfo) -> Review {
+    func formatToReview(_ review: ReviewInfo) -> Review {
         let reviewModel = ReviewModel()
         let newReview = Review()
         newReview.id = review.id
         newReview.content = review.content
         newReview.authorUser = review.author.user
         var avatarImg = "Na"
-        if let path = review.author.avatar{
-            avatarImg = reviewModel.formatAvatarPath(path)
-        }
+        guard let path = review.author.avatar else { return newReview }
+        avatarImg = reviewModel.formatAvatarPath(path)
         newReview.authorAvatar = avatarImg
-        
         return newReview
     }
-    
 }

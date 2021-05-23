@@ -1,0 +1,17 @@
+disabled_rules:
+  - identifier_name
+  - force_try
+  - force_cast
+  - trailing_whitespace
+  - empty_parentheses_with_trailing_closure
+  - function_parameter_count
+
+included:
+  - Video Club App
+  
+excluded:
+  - Video Club App/AppDelegate.swift
+  - Video Club App/SceneDelegate.swift
+  - Pods
+
+line_length: 200

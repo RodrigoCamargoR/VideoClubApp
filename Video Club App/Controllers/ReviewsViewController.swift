@@ -14,7 +14,7 @@ class ReviewsViewController: UIViewController {
     @IBOutlet weak var movieImage: UIImageView!
     @IBOutlet weak var reviewsTableView: UITableView!
     
-    var movie: Movie? = nil
+    var movie: Movie?
     var movieIndex: Int = -1
     var realmDB = RealmDatabase()
     var reviews = [Review]()
@@ -26,15 +26,15 @@ class ReviewsViewController: UIViewController {
         if movieIndex >= 0 {
             reviews = realmDB.getReviews(movieIndex)
             self.loadReviews()
-        }else{
+        } else {
             print("No movie was passed!")
         }
     }
     
-    func loadReviews(){
+    func loadReviews() {
         if movie!.hasReviews(reviews.count) {
             reviewsHowMany.text = "Reviews(\(reviews.count))"
-        }else{
+        } else {
             reviewsHowMany.text = "This movie does not have any reviews yet."
         }
         let path = k.baseImageUrl + movie!.posterImage
@@ -45,7 +45,7 @@ class ReviewsViewController: UIViewController {
         self.reviewsTableView.reloadData()
     }
 
-    //MARK: - Load Poster Image
+    // MARK: - Load Poster Image
     func loadMovieImage(_ path: String) {
         let url = URL(string: path)
         let resource = ImageResource(downloadURL: url!, cacheKey: path)

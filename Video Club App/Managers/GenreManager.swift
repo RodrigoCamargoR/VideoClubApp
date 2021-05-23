@@ -10,7 +10,7 @@ import Foundation
 struct GenreManager {
     var api = MoviesApi()
     
-    mutating func getGenres(completion: @escaping (GenreData?, Error?) -> ()){
+    mutating func getGenres(completion: @escaping (GenreData?, Error?) -> Void) {
         api.getMovieGenres() { (result) in
             switch result {
             case .success(let listOf):
