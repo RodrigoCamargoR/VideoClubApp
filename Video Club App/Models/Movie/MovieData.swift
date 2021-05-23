@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-struct MovieData: Codable {
+class MovieData: Codable {
     let movies: [MovieInfo]
     
     private enum CodingKeys: String, CodingKey {
@@ -16,7 +16,7 @@ struct MovieData: Codable {
     }
 }
 
-struct MovieInfo: Codable {
+class MovieInfo: Codable {
     let id: Int
     let title: String
     let overview: String

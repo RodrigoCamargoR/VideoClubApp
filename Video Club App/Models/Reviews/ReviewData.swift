@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-struct ReviewData: Codable {
+class ReviewData: Codable {
     let reviews: [ReviewInfo]
     
     private enum CodingKeys: String, CodingKey {
@@ -16,7 +16,7 @@ struct ReviewData: Codable {
     }
 }
 
-struct ReviewInfo: Codable {
+class ReviewInfo: Codable {
     let id: String
     let content: String
     let author: ReviewAuthor
@@ -27,7 +27,7 @@ struct ReviewInfo: Codable {
     }
 }
 
-struct ReviewAuthor: Codable {
+class ReviewAuthor: Codable {
     let user: String
     let name: String?
     let avatar: String?
