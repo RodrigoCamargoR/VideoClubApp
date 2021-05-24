@@ -102,7 +102,7 @@ extension ReviewsViewController: UITableViewDataSource {
             cell.userImage.kf.setImage(with: resource, placeholder: placeholder, options: nil, completionHandler: nil)
         }
         
-        cell.stackBubble.layer.cornerRadius = 15
+        cell.stackBubble.layer.cornerRadius = 10
         cell.userImage.layer.cornerRadius = 20
         cell.userImage.translatesAutoresizingMaskIntoConstraints = false
         

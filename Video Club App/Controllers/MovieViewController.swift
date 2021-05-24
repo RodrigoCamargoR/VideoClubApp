@@ -106,7 +106,8 @@ class MovieViewController: UIViewController {
         headerImage.kf.setImage(with: resource, placeholder: nil, options: nil, completionHandler: nil)
         headerImage.contentMode = .top
         headerImage.clipsToBounds = true
-        headerImage.image = headerImage.image!.resizeTopAlignedToFill(newWidth: headerImage.frame.width)
+        guard var headerImg = headerImage.image else { return }
+        headerImg = headerImg.resizeTopAlignedToFill(newWidth: headerImage.frame.width)!
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {

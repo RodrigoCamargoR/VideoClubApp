@@ -17,8 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Start monitoring internet connection
         NetworkMonitor.shared.startMonitoring()
         updateLastConnectionDateEveryMinute()
-        
-        navigateToAnotherScreen()
          
         return true
     }
@@ -30,21 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 realmDB.addCurrentConnectionDateTime()
             }
         })
-    }
-    
-    private func navigateToAnotherScreen() {
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        let navigat = UINavigationController()
-        let vcw = ViewController(nibName: "ViewController", bundle: nil)
-
-        // Push the vcw to the navigat
-        navigat.pushViewController(vcw, animated: false)
-
-        // Set the window’s root view controller
-        window.rootViewController = navigat
-
-        // Present the window
-        window.makeKeyAndVisible()
     }
 
     // MARK: UISceneSession Lifecycle
