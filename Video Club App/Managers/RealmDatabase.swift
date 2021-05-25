@@ -26,6 +26,10 @@ struct RealmDatabase {
         }
     }
     
+    func isEmpty() -> Bool{
+        return realm.isEmpty
+    }
+    
     // MARK: - Get last connection DateTime
     func getLastConnecionDate() -> Date {
         var newLastDate = Date()

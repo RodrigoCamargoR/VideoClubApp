@@ -25,6 +25,7 @@ struct Constants {
     // MARK: - Image names
     let dummyUser = "dummyUser"
     let noPosterAvailable = "NoImageAvailable"
+    let gradient = "Gradient"
     
     // MARK: - Offline Mode
     /* The value below is expressed in hours, so if the value = 24, the data will be

@@ -31,13 +31,17 @@ class ViewController: UIViewController {
             genreModel.fetchGenres()
         } else {
             // Offline mode
-            let today = Date()
-            let date = realmDB.getLastConnecionDate()
-            if today.timeIntervalSince(date) > (k.connectionHours * 3600) {
-                realmDB.deleteAllData()
+            if realmDB.isEmpty() {
                 loadConnectToInternetAlert()
             } else {
-                loadRealmMovies()
+                let today = Date()
+                let date = realmDB.getLastConnecionDate()
+                if today.timeIntervalSince(date) > (k.connectionHours * 3600) {
+                    realmDB.deleteAllData()
+                    loadConnectToInternetAlert()
+                } else {
+                    loadRealmMovies()
+                }
             }
         }
         

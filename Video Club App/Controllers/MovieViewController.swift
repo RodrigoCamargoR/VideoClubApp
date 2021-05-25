@@ -12,7 +12,6 @@ import Kingfisher
 class MovieViewController: UIViewController {
 
     @IBOutlet weak var movieTitle: UILabel!
-    
     @IBOutlet weak var peopleWatching: UILabel!
     @IBOutlet weak var genres: UILabel!
     @IBOutlet weak var rate: UILabel!
@@ -38,7 +37,7 @@ class MovieViewController: UIViewController {
             movieTitle.text = movie!.title
             peopleWatching.text = "\(Int(movie!.popularity)) people watching"
             rate.text = String(movie!.rate)
-            gradientImage.image = UIImage(named: "Gradient")
+            gradientImage.image = UIImage(named: k.gradient)
             movieDescription.text = movie!.overview
             loadPosterImage(movie!.posterImage)
             loadHeaderImage(movie!.secondImg)
