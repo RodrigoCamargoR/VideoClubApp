@@ -26,7 +26,7 @@ struct RealmDatabase {
         }
     }
     
-    func isEmpty() -> Bool{
+    func isEmpty() -> Bool {
         return realm.isEmpty
     }
     
