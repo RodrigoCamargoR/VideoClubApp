@@ -13,6 +13,7 @@ class APITests: XCTestCase {
     func test_Api_Movies_ReturnsNotNil(){
         var movieManager = MovieManager()
         movieManager.getMovies { (result, error) in
+            XCTAssert(result!.movies.count > 0)
             XCTAssertNotNil(result)
             XCTAssertNil(error)
         }
@@ -21,6 +22,7 @@ class APITests: XCTestCase {
     func test_Api_Genres_ReturnsNotNil() {
         var genreManager = GenreManager()
         genreManager.getGenres { (result, error) in
+            XCTAssertTrue(result!.genres.count > 0)
             XCTAssertNotNil(result)
             XCTAssertNil(error)
         }
